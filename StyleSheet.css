@@ -1,0 +1,24 @@
+﻿body {
+    
+}
+
+
+p {
+    font-family: Tahoma;
+}
+
+p.first {
+    color: aqua;
+}
+
+p.second {
+    border: double;
+}
+
+p.third {
+    border: dashed;
+    border-top-color: darkgreen;
+    border-bottom-color: bisque;
+    border-left-color :burlywood;
+    border-right-color: cadetblue;
+}
