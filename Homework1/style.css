@@ -10,18 +10,23 @@ h2 {
 table {
 	border-collapse: collapse;
 	width: 80%;
-	margin-left: 5%;
+	margin-left: 10%;
 	margin-right: 10%;
 	text-align: center;
 	
 }
 
 th {
-	padding: 10px;
+	padding: 15px;
 	background-color: #b8b894;
 	color:#000000;
 }
 
 tr:nth-child(odd) {
 	background-color: #b8b894;
+}
+
+.container {
+	width: 50px;
+	height: 40px;
 }
