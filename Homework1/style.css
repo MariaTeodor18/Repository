@@ -1,0 +1,27 @@
+body{
+	background-color: #999966;
+}
+h2 {
+	font-family: "Times New Roman", Serif;
+	color: #ffffff;
+	text-align: center;
+}
+
+table {
+	border-collapse: collapse;
+	width: 80%;
+	margin-left: 5%;
+	margin-right: 10%;
+	text-align: center;
+	
+}
+
+th {
+	padding: 10px;
+	background-color: #b8b894;
+	color:#000000;
+}
+
+tr:nth-child(odd) {
+	background-color: #b8b894;
+}
