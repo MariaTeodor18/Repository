@@ -1,0 +1,21 @@
+﻿@model WebApplication2.Models.Mine
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+@if (Model.Type == WebApplication2.Models.ResourceType.Clay)
+{   <div class="mine-detail">
+    
+        <h3>@Model.Type</h3>
+        <h4>Description: Clay description</h4>
+        <img src="~/Content/img/mine-@(Model.Type).png" />
+           @{ var prod = 13 * Model.Level;
+           }
+        <h4>Current Production: @prod</h4>
+        <h4>Next level Production: @(13+prod)</h4>
+    
+    </div>
+}
