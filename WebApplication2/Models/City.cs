@@ -41,7 +41,11 @@ namespace WebApplication2.Models
 
         public ResourceType Type { get; set; }
     }
-
+    
+    public void Upgrade()
+    {
+            Level++;
+    }
     public enum ResourceType
     {
         Wheat,
