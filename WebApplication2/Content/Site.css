@@ -1,4 +1,4 @@
-﻿body {
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -42,9 +42,9 @@ body {
     font-size:x-large;
 }
 
-td {
+/*td {
     background-color: lightgreen;
-}
+}*/
 
 .mine-detail{
     margin:10px;
@@ -54,4 +54,26 @@ td {
     border-width:1px;
     border-style: solid;
     border-radius:25px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+tr {
+    background-color: #9fff80;
+}
+
+th {
+    padding: 15px;
+    background-color: #8cff66;
+    color: #000000;
+}
+
+tr:nth-child(odd) {
+    background-color: #8cff66;
 }
