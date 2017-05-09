@@ -42,9 +42,9 @@ body {
     font-size:x-large;
 }
 
-/*td {
+td {
     background-color: lightgreen;
-}*/
+}
 
 .mine-detail{
     margin:10px;
@@ -56,7 +56,7 @@ body {
     border-radius:25px;
 }
 
-table {
+/*table {
     border-collapse: collapse;
     width: 50%;
     margin-left: 10%;
@@ -77,7 +77,7 @@ th {
 tr:nth-child(odd) {
     background-color: #8cff66;
 }
-
+    */
 #city-img {
     position: absolute;
     top: 206px;
@@ -96,37 +96,37 @@ tr:nth-child(odd) {
     top: 100px;
     left: 100px;
     background: green;
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
+    text-decoration: none;
+    padding-left: 0.5em;
     border-radius: 15px;
     transition: all .2s linear;
+    border-style: solid;
+    border-width: 2px;
 }
 
 .mine-level:hover {
     transform: scale(1.5);
 }
-.mine-clay {
-    background: olive;
-    top: 100px;
-    left: 97px;
+.clay {
+    background: #ffb366;
+    border-color: #cc6600;
 }
 
-.mine-wood {
-    background: brown;
-    top: 244px;
-    left: 153px;
+.wood {
+    background: #85e085;
+    border-color: #258e25;
 }
 
-.mine-wheat {
-    background: yellow;
-    top: 23px;
-    left: 248px;
+.wheat {
+    background: #ffe680;  
+    border-color: #665200;
 }
 
-.mine-iron {
-    background: grey;
-    top: 158px;
-    left: 350px;
+.iron {
+    background: #cce6ff;
+    border-color: darkgrey;
     transform: translate(10.5px, 25.5px);
 }
 
@@ -145,4 +145,64 @@ tr:nth-child(odd) {
 .upgrading {
     animation: upgrading .5s infinite;
 
+}
+
+.mine-clay-1 {
+    top: 220px;
+    left: 330px;
+}
+.mine-clay-2 {
+    top: 246px;
+    left: 153px;
+}
+.mine-clay-3 {
+    top: 77px;
+    left: 252px;
+}
+
+.mine-wheat-1 {
+    top: 25px;
+    left: 245px;
+}
+.mine-wheat-2 {
+    top: 165px;
+    left: 65px;
+}
+.mine-wheat-3 {
+    top: 120px;
+    left: 115px;
+}
+.mine-wheat-4 {
+    top: 120px;
+    left: 52px;
+}
+.mine-wheat-5 {
+    top: 158px;
+    left: 372px;
+}
+.mine-wheat-6 {
+    top: 165px;
+    left: 112px;
+}
+
+.mine-wood-1 {
+    top: 220px;
+    left: 249px;
+}
+.mine-wood-2 {
+    top: 33px;
+    left: 330px;
+}
+.mine-wood-3 {
+    top: 25px;
+    left: 133px;
+}
+
+.mine-iron-1 {
+    top: 60px;
+    left: 372px;
+}
+.mine-iron-2 {
+    top: 35px;
+    left: 100px;
 }
