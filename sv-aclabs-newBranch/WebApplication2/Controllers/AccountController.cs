@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Globalization;
 using System.Linq;
 using System.Security.Claims;
@@ -159,27 +159,106 @@ namespace WebApplication2.Controllers
                     Cities = new List<City>() {
                         new City()
                         {
-                           Mines = new List<Mine>
+
+                           Mines = new List<Mine>()
                            {
                                new Mine
                                {
-                                   Level =0, 
+                                   Level =0,
                                    Type = ResourceType.Clay,
+                                   Description = "Clay is produced here. By increasing its level, you increase the clay production",
+                                   MineStyle = "mine-clay-1",
                                },
                                 new Mine
                                {
-                                   Level = 0,
-                                   Type = ResourceType.Iron,
+                                   Level =0,
+                                   Type = ResourceType.Clay,
+                                   Description = "Clay is produced here. By increasing its level, you increase the clay production",
+                                   MineStyle = "mine-clay-2",
                                },
-                               new Mine
+                                 new Mine
                                {
-                                   Level = 0,
-                                   Type = ResourceType.Wheat,
+                                   Level =0,
+                                   Type = ResourceType.Clay,
+                                   Description = "Clay is produced here. By increasing its level, you increase the clay production",
+                                   MineStyle = "mine-clay-3",
                                },
-                               new Mine
+                                 new Mine
                                {
-                                   Level = 0,
+                                   Level =0,
                                    Type = ResourceType.Wood,
+                                   Description = "Wood is produced here. By increasing its level, you increase the wood production",
+                                   MineStyle = "mine-wood-1",
+                               },
+                                new Mine
+                               {
+                                   Level =0,
+                                   Type = ResourceType.Wood,
+                                   Description = "Wood is produced here. By increasing its level, you increase the wood production",
+                                   MineStyle = "mine-wood-2",
+                               },
+                                 new Mine
+                               {
+                                   Level =0,
+                                   Type = ResourceType.Wood,
+                                   Description = "Wood is produced here. By increasing its level, you increase the wood production",
+                                   MineStyle = "mine-wood-3",
+                               },
+                                new Mine
+                               {
+                                   Level =0,
+                                   Type = ResourceType.Iron,
+                                   Description = "Iron is produced here. By increasing its level, you increase the iron production",
+                                   MineStyle = "mine-iron-1",
+                               },
+                                 new Mine
+                               {
+                                   Level =0,
+                                   Type = ResourceType.Iron,
+                                   Description = "Iron is produced here. By increasing its level, you increase the iron production",
+                                   MineStyle = "mine-iron-2",
+                               },
+                                new Mine
+                               {
+                                   Level =0,
+                                   Type = ResourceType.Wheat,
+                                   Description = "Wheat is produced here. By increasing its level, you increase the wheat production",
+                                   MineStyle = "mine-wheat-1",
+                               },
+                                 new Mine
+                               {
+                                   Level =0,
+                                   Type = ResourceType.Wheat,
+                                   Description = "Wheat is produced here. By increasing its level, you increase the wheat production",
+                                   MineStyle = "mine-wheat-2",
+                               },
+                                  new Mine
+                               {
+                                   Level =0,
+                                   Type = ResourceType.Wheat,
+                                   Description = "Wheat is produced here. By increasing its level, you increase the wheat production",
+                                   MineStyle = "mine-wheat-3",
+                               },
+                                   new Mine
+                               {
+                                   Level =0,
+                                   Type = ResourceType.Wheat,
+                                   Description = "Wheat is produced here. By increasing its level, you increase the wheat production",
+                                   MineStyle = "mine-wheat-4",
+                               },
+                                    new Mine
+                               {
+                                   Level =0,
+                                   Type = ResourceType.Wheat,
+                                   Description = "Wheat is produced here. By increasing its level, you increase the wheat production",
+                                   MineStyle = "mine-wheat-5",
+                               },
+                                     new Mine
+                               {
+                                   Level =0,
+                                   Type = ResourceType.Wheat,
+                                   Description = "Wheat is produced here. By increasing its level, you increase the wheat production",
+                                   MineStyle = "mine-wheat-6",
                                },
                            },
                            Resources = new List<Resource>
@@ -205,7 +284,7 @@ namespace WebApplication2.Controllers
                                    LastUpdate = DateTime.Now,
                                },
                            }
-
+                           
                        },
                            
                         
