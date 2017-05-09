@@ -27,9 +27,16 @@
             }
             @time;
         }</h4>
-         <form action="/Mines/Index" method="post">
+
+        @using (Html.BeginForm("Upgrade","Mines"))
+        {
+            @Html.HiddenFor(m => m.MineId);
+            <div>Do a fast upgrade? @Html.CheckBox("fastUpgrade"); </div>
+            <button type="submit">Submit</button>
+        }
+         <!-->form action="/Mines/Index" method="post">
             <input type="hidden" name="MineId" value="@(Model.MineId)">
             <input type="submit" value="Upgrade" style="border: none; background-color: #a7f442; border-radius: 10px;">
-         </form>
+         </form-->
     </div>
 }
