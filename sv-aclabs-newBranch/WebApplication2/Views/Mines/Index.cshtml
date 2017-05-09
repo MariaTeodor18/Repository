@@ -4,50 +4,44 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Resources</h2>
-<br />
 
-<table  align="right" style="vertical-align: bottom;">
+<div class="body-content">
+<table>
     <tr >
         @foreach (var res in this.Model.Resources)
         {
             <td class="res-img @(res.Type)"><img src="~/Content/img/icon-@(res.Type).png" /></td>
-            <td class="res-value @(res.Type)">@res.Level.ToString("n4")</td>
-            <td class="res-lastUpdate @(res.Type)">@res.LastUpdate</td>
+            <td class="res-value @(res.Type)">@res.Level.ToString("F4")</td>
+            <td class="res-lastUpdate @(res.Type) hidden">@res.LastUpdate</td>
         }
     </tr>
 </table>
 
+</div>
 
-<table class="mines">
-<thead>
-<tr >
-    <th></th>
-    <th>Resource Type</th>
-    <th>Level</th>
-    <th></th>
-    <th></th>
-</tr>
-</thead>
-<tbody>    
-@foreach (var Mine in this.Model.Mines)
-{
-    <tr class="@(Mine.Type)">
-        <td> <img src="~/Content/img/icon-@(Mine.Type).png" /></td>
-        <td>@Mine.Type</td>
-        <td>@Mine.Level</td>
-        <td>
-            <form action="/Mines/Index" method="post">
-                <input type="hidden" name="MineId" value="@Mine.MineId">
-                <input type="submit" value="Upgrade" style="border: none; background-color: #a7f442; border-radius: 10px;">
-            </form>
-        </td>
-        <td>@Html.ActionLink("Details", "Details", new { mineId = Mine.MineId } ) </td>
-        <td class="hourProduction">@Mine.GetProductionPerHour()</td>
-    </tr>
-}
-</tbody>
-</table>
+<div class="main">
+    <img id="city-img" src="~/Content/img/village-bg.jpg" />
+
+        <div class="mine-wrapper">
+
+            @foreach (var Mine in this.Model.Mines)
+            {
+               
+               <div class="mine-level @(Mine.MineStyle) @(Mine.Type.ToString().ToLower())">
+                   <div hidden>@Mine.Type</div> 
+                   @{ 
+                        String level = @Mine.Level.ToString();
+                    }
+                    <div>@Html.ActionLink(level, "Details", new { mineId = Mine.MineId })</div>
+                    <div hidden>Mine.GetProductionPerHour()</div>
+               </div>
+                
+            }
+
+
+        </div>
+    </div>
+
 
 <br />
 @section Scripts {
