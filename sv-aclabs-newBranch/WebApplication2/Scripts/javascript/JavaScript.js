@@ -1,4 +1,4 @@
-﻿
+
 $(document).ready(function() {
 
     var updateResources = function () {
@@ -16,7 +16,7 @@ $(document).ready(function() {
         var currentValue = parseFloat($(".res-value." + resourceName).text());
         var lastUpdate = Date.parse($(".res-lastUpdate." + resourceName).text());
 
-        var mines = $(".mines").find("." + resourceName);
+        var mines = $(".mine-wrapper").find("." + resourceName);
 
         $.each(mines, function (index, value) {
 
@@ -30,7 +30,5 @@ $(document).ready(function() {
         $(".res-lastUpdate." + resourceName).text(start.strftime("%Y-%m-%d %H:%M:%S"));
     };
 
-   
-
-    setInterval(updateResources, 500);
+    setInterval(updateResources, 1000);
 });
