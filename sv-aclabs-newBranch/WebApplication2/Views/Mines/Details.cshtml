@@ -1,3 +1,5 @@
+@using System;
+@using System.Globalization;
 @model WebApplication2.Models.Mine
 
 @{
@@ -10,32 +12,24 @@
     <div class="mine-detail"> 
         <h3>@Model.Type</h3>
 
-    @if (Model.Type == WebApplication2.Models.ResourceType.Clay) {
-        <h4>Description: <br />
-        Clay is produced here. By increasing its level, you increase the clay production
-        </h4>
-    }
-    else  if(Model.Type == WebApplication2.Models.ResourceType.Iron) {
-        <h4>Description: <br />
-        Iron is produced here. By increasing its level, you increase the clay production
-        </h4>
-    }
-    else if (Model.Type == WebApplication2.Models.ResourceType.Wheat) {
-        <h4>Description: <br />
-        Wheat is produced here. By increasing its level, you increase the clay production
-        </h4>
-    }
-    else if(Model.Type == WebApplication2.Models.ResourceType.Wood) {
-        <h4>Description: <br />
-        Wood is produced here. By increasing its level, you increase the clay production
-        </h4>
-    }
-
+        <h4>Description: @(Model.Description) </h4>
+        
         <img src="~/Content/img/mine-@(Model.Type).png" />
            @{ var prod = 13 * Model.Level;
            }
         <h4>Current Production: @prod</h4>
-        <h4>Next level Production: @(13+prod)</h4>
-    
+        <h4>Next level Production: @(13 + prod)</h4>
+        <h4>Time left until upgrading: @{ 
+            var time = Model.UpgradeCompletion - DateTime.Now;
+            if (time.Hours < 0 && time.Minutes < 0)
+            {
+                time = new TimeSpan(0, 0, 0);
+            }
+            @time;
+        }</h4>
+         <form action="/Mines/Index" method="post">
+            <input type="hidden" name="MineId" value="@(Model.MineId)">
+            <input type="submit" value="Upgrade" style="border: none; background-color: #a7f442; border-radius: 10px;">
+         </form>
     </div>
 }
