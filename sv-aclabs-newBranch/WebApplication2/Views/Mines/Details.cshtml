@@ -4,6 +4,7 @@
 
 @{
     ViewBag.Title = "Details";
+    this.Layout = null;
 }
 
     <h2>Details</h2>
@@ -34,9 +35,9 @@
             <div>Do a fast upgrade? @Html.CheckBox("fastUpgrade"); </div>
             <button type="submit">Submit</button>
         }
-         <!-->form action="/Mines/Index" method="post">
+        @* <!-->form action="/Mines/Index" method="post">
             <input type="hidden" name="MineId" value="@(Model.MineId)">
             <input type="submit" value="Upgrade" style="border: none; background-color: #a7f442; border-radius: 10px;">
-         </form-->
+         </form--> *@
     </div>
-}
+

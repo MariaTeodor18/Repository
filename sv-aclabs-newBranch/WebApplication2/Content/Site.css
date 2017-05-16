@@ -46,14 +46,14 @@ td {
     background-color: lightgreen;
 }
 
-.mine-detail{
-    margin:10px;
-    padding:50px;
-    background-color:white;
-    border-color:green;
-    border-width:1px;
+.mine-detail {
+    margin: 10px;
+    padding: 50px;
+    background-color: ivory;
+    border-color: green;
+    border-width: 1px;
     border-style: solid;
-    border-radius:25px;
+    border-radius: 25px;
 }
 
 /*table {
@@ -205,4 +205,36 @@ tr:nth-child(odd) {
 .mine-iron-2 {
     top: 35px;
     left: 100px;
+}
+
+#mine-details-container {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin-left: -400px;
+    width: 800px;
+    
+    display: none;
+}
+
+#mine-details-container.show{
+    display: block;
+}
+
+#mine-details-container > .close-btn { /*copil direct*/
+    display: block;
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+#mine-details-container > .content {
+
+}
+
+.mine-details-btn {
+    cursor: pointer;
 }
