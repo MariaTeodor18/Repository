@@ -191,9 +191,11 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BuildingsController.cs" />
+    <Compile Include="Controllers\CityFilterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MinesController.cs" />
+    <Compile Include="Controllers\TroopTypesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -204,6 +206,14 @@
     <Compile Include="Migrations\201705091710171_isUpgrading.cs" />
     <Compile Include="Migrations\201705091710171_isUpgrading.Designer.cs">
       <DependentUpon>201705091710171_isUpgrading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705231535315_TroopAdd.cs" />
+    <Compile Include="Migrations\201705231535315_TroopAdd.Designer.cs">
+      <DependentUpon>201705231535315_TroopAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705231600165_AttributesAdd.cs" />
+    <Compile Include="Migrations\201705231600165_AttributesAdd.Designer.cs">
+      <DependentUpon>201705231600165_AttributesAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -307,6 +317,12 @@
     <Content Include="Views\Mines\Upgrade.cshtml" />
     <Content Include="Views\Buildings\Index.cshtml" />
     <Content Include="Views\Buildings\Build.cshtml" />
+    <Content Include="Views\TroopTypes\Create.cshtml" />
+    <Content Include="Views\TroopTypes\Delete.cshtml" />
+    <Content Include="Views\TroopTypes\Details.cshtml" />
+    <Content Include="Views\TroopTypes\Edit.cshtml" />
+    <Content Include="Views\TroopTypes\Index.cshtml" />
+    <Content Include="Views\CityFilter\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -320,6 +336,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705091710171_isUpgrading.resx">
       <DependentUpon>201705091710171_isUpgrading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705231535315_TroopAdd.resx">
+      <DependentUpon>201705231535315_TroopAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705231600165_AttributesAdd.resx">
+      <DependentUpon>201705231600165_AttributesAdd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
