@@ -5,37 +5,37 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebApplication2.Models;
+using DataAccess;
+using BusinessLogic;
 
 namespace WebApplication2.Scripts
 {
     [Authorize]
     public class MinesController : Controller
     {
-        ApplicationDbContext dbContext = new ApplicationDbContext();
+        private MinesService minesService;
+
+        public MinesController()
+        {
+            minesService = new MinesService();
+        }
+
         // GET: Mines
         public ActionResult Index(int? cityId)
-        {
+        {  
             var userId = this.User.Identity.GetUserId();
-            var user = dbContext.Users.Find(userId);
-            var city = user.Cities.First();
-
-            if(cityId != null)
-            {
-                city = dbContext.Cities.Find(cityId);
-            }
-
-            this.UpdateResources(city);
+            var city = minesService.UpdateResources(userId);
 
             return View(city);
         }
 
-        public ActionResult Details(int mineId)
+       /* public ActionResult Details(int mineId)
         {
             //iei mina, pasezi la view si afisezi informatii : tipul mine, imagine, descriere a minei, prod curenta, productia pt level urmator
             var mine = dbContext.Mines.Find(mineId);
            
             return View(mine);
-        }
+        }*/
 
        /// [HttpPost]
         /*public ActionResult Index(int mineId)
@@ -51,7 +51,7 @@ namespace WebApplication2.Scripts
             });*/
         //}
 
-        private void UpdateResources(City city)
+      /*  private void UpdateResources(City city)
         {
             var start = DateTime.Now;
             foreach (var res in city.Resources)
@@ -67,9 +67,9 @@ namespace WebApplication2.Scripts
             }
             dbContext.SaveChanges();
 
-        }
+        }*/
 
-        [HttpPost]
+      /*  [HttpPost]
         public ActionResult Upgrade(int mineId, int cityId, bool fastUpgrade)
         {
             var mine = this.dbContext.Mines.Find(mineId);
@@ -84,7 +84,7 @@ namespace WebApplication2.Scripts
 
             /*  var amounts = needed.Select(m => m.amount);*/
 
-            var r = needed.Join(have, n => n.type, h => h.Type, (n, h) => (needed: n, have: h));
+         /*   var r = needed.Join(have, n => n.type, h => h.Type, (n, h) => (needed: n, have: h));
 
             if(!r.All(_ => _.needed.amount < _.have.Level))
             {
@@ -104,6 +104,6 @@ namespace WebApplication2.Scripts
             this.dbContext.SaveChanges();
 
             return RedirectToAction("Index", "Mines", new { cityId });
-        }
+        }*/
     }
 }

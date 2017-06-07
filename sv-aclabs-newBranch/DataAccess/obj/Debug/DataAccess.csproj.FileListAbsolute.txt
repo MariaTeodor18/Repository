@@ -1,0 +1,15 @@
+D:\Mimi\sv-aclabs-newBranch\DataAccess\bin\Debug\DataAccess.dll.config
+D:\Mimi\sv-aclabs-newBranch\DataAccess\bin\Debug\DataAccess.dll
+D:\Mimi\sv-aclabs-newBranch\DataAccess\bin\Debug\DataAccess.pdb
+D:\Mimi\sv-aclabs-newBranch\DataAccess\bin\Debug\EntityFramework.dll
+D:\Mimi\sv-aclabs-newBranch\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\Mimi\sv-aclabs-newBranch\DataAccess\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Mimi\sv-aclabs-newBranch\DataAccess\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Mimi\sv-aclabs-newBranch\DataAccess\bin\Debug\System.ValueTuple.dll
+D:\Mimi\sv-aclabs-newBranch\DataAccess\bin\Debug\EntityFramework.xml
+D:\Mimi\sv-aclabs-newBranch\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\Mimi\sv-aclabs-newBranch\DataAccess\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\Mimi\sv-aclabs-newBranch\DataAccess\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Mimi\sv-aclabs-newBranch\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+D:\Mimi\sv-aclabs-newBranch\DataAccess\obj\Debug\DataAccess.dll
+D:\Mimi\sv-aclabs-newBranch\DataAccess\obj\Debug\DataAccess.pdb

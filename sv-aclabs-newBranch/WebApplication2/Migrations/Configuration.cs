@@ -4,9 +4,9 @@ namespace WebApplication2.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
-    using WebApplication2.Models;
+    using DataAccess;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<WebApplication2.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<DataAccess.ApplicationDbContext>
     {
         public Configuration()
         {
@@ -14,7 +14,7 @@ namespace WebApplication2.Migrations
             ContextKey = "WebApplication2.Models.ApplicationDbContext";
         }
 
-        protected override void Seed(WebApplication2.Models.ApplicationDbContext context)
+       /* protected override void Seed(WebApplication2.Models.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 
@@ -50,6 +50,6 @@ namespace WebApplication2.Migrations
                     }
                 }
             }
-        }
+        }*/
     }
 }
