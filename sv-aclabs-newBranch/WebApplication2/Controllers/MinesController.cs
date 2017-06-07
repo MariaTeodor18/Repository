@@ -13,11 +13,17 @@ namespace WebApplication2.Scripts
     {
         ApplicationDbContext dbContext = new ApplicationDbContext();
         // GET: Mines
-        public ActionResult Index()
+        public ActionResult Index(int? cityId)
         {
             var userId = this.User.Identity.GetUserId();
             var user = dbContext.Users.Find(userId);
             var city = user.Cities.First();
+
+            if(cityId != null)
+            {
+                city = dbContext.Cities.Find(cityId);
+            }
+
             this.UpdateResources(city);
 
             return View(city);
@@ -31,8 +37,8 @@ namespace WebApplication2.Scripts
             return View(mine);
         }
 
-        [HttpPost]
-        public ActionResult Index(int mineId)
+       /// [HttpPost]
+        /*public ActionResult Index(int mineId)
         {
             var mine = dbContext.Mines.Find(mineId);
             mine.Upgrade();
@@ -43,7 +49,7 @@ namespace WebApplication2.Scripts
             {
                 Message = "Upgrade succsessful"
             });*/
-        }
+        //}
 
         private void UpdateResources(City city)
         {
@@ -64,7 +70,7 @@ namespace WebApplication2.Scripts
         }
 
         [HttpPost]
-        public ActionResult Upgrade(int mineId, bool fastUpgrade)
+        public ActionResult Upgrade(int mineId, int cityId, bool fastUpgrade)
         {
             var mine = this.dbContext.Mines.Find(mineId);
             var city = mine.City;
@@ -97,10 +103,7 @@ namespace WebApplication2.Scripts
             mine.UpgradeCompletion = DateTime.Now.AddHours(0.5 * mine.Level);
             this.dbContext.SaveChanges();
 
-            return View(new MessageViewModel
-            {
-                Message = $"MineId = {mineId} {fastUpgrade}" /* Upgrade succesful*/
-            });
+            return RedirectToAction("Index", "Mines", new { cityId });
         }
     }
 }

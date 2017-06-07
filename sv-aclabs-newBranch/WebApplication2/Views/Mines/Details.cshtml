@@ -26,11 +26,12 @@
             @time;
         }</h4>
 
-        @using (Html.BeginForm("Upgrade","Mines"))
+        @using (Html.BeginForm("Upgrade","Mines", new { mineId = this.Model.MineId, cityId = this.Model.CityId }))
         {
             @Html.HiddenFor(m => m.MineId);
-            <div>Do a fast upgrade? @Html.CheckBox("fastUpgrade"); </div>
-            <button type="submit">Submit</button>
+            <div>Do a fast upgrade? @Html.CheckBox("fastUpgrade") </div>
+            <button id="upgrade" type="submit" class="btn btn-success">Submit</button>
+            
         }
         @* <!-->form action="/Mines/Index" method="post">
             <input type="hidden" name="MineId" value="@(Model.MineId)">

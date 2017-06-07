@@ -27,7 +27,7 @@
             @foreach (var Mine in this.Model.Mines)
             {
                
-               <div class="mine-level @(Mine.MineStyle) @(Mine.Type.ToString().ToLower())">
+               <div class="@(Mine.Type) mine-level @(Mine.MineStyle) @(Mine.Type.ToString().ToLower())">
                    <div hidden>@Mine.Type</div> 
                     <div class="mine-details-btn" data-mine-id="@Mine.MineId">@Mine.Level</div>
                     <div class="hourProduction hidden">@Mine.GetProductionPerHour()</div>

@@ -1,0 +1,29 @@
+﻿@model WebApplication2.Models.ApplicationUser
+
+@{
+    ViewBag.Title = "Cities";
+}
+
+<h2>Cities</h2>
+
+<form action="/Cities/AddCity" method="post">
+    <input type="submit" value="New City" class="btn btn-info" />
+</form>
+
+<br />
+
+@{
+    if (Model != null)
+    {
+        foreach (var City in Model.Cities)
+        {
+            using (Html.BeginForm("Index", "Mines", new { cityId = City.CityId }))
+            {
+                var cityName = "City" + City.CityId;
+                <input type="submit" value=@cityName name="submit" class="btn btn-info" />
+                <hr />
+            }
+        }
+    }
+}
+

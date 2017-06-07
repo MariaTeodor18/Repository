@@ -10,13 +10,12 @@ $(document).ready(function() {
     };
 
     var updateResource = function (resourceName) {
-        console.log('apel ok');
 
         var start = new Date();
         var currentProduction = 0;
         var currentValue = parseFloat($(".res-value." + resourceName).text());
         var lastUpdate = Date.parse($(".res-lastUpdate." + resourceName).text());
-
+        
         var mines = $(".mine-wrapper").find("." + resourceName);
 
         $.each(mines, function (index, value) {
@@ -31,7 +30,7 @@ $(document).ready(function() {
         $(".res-value." + resourceName).text(nextValue); /*seteaza valoarea*/
         $(".res-lastUpdate." + resourceName).text(start.strftime("%Y-%m-%d %H:%M:%S"));
 
-        console.log(nextValue);
+        
     };
 
     setInterval(updateResources, 1000);
@@ -50,5 +49,9 @@ $(document).ready(function() {
 
     $('#mine-details-container > .close-btn').click(function () {
         $('#mine-details-container').removeClass('show');
+    });
+
+    $('#upgrade').click(function () {
+        $(this).attr("disabled", true);
     });
 });

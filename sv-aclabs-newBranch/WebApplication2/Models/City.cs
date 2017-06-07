@@ -65,6 +65,8 @@ namespace WebApplication2.Models
        
         public double GetProductionPerHour(int? level = null)
         {
+            if (level == 0)
+                return 1;
             return (level ?? this.Level) * 13;
         }
 
